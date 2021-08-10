@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b40c5dd450.js" crossorigin="anonymous"></script>
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <script>
+        var stripePKey = "<%= STRIPEPKEY %>"
+    </script>
+    <script src="cart.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script&family=Sacramento&display=swap" rel="stylesheet">
+    <title>King's Kitchen</title>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <ul>
+            <button class="nav-btn">
+                <li class="about-us" id="about">About</li>
+            </button></li>
+            <img src="Image/logo.png" alt="" class="logo">
+            <button class="nav-btn" onclick="showCart()">
+                <li><i class="fas fa-cart-plus"></i></li>
+            </button></li>
+        </ul>
+    </div>
+
+    <div class="about-paragraph" id="about_us">
+        <div class="close-para-btn" id="close-about">X</div>
+        King's Kitchen story,<br> 
+        <br>
+        Organizer, Mr Li, opened the first ‘King's Kitchen’ restaurant in Shanghai, China back in 1975.
+        Today, there are 38 branches in China and 3 in Australia. <br>
+        <br>
+        King's Kitchen is a tradional Chinese restaurant style and it's well known for its Peking Duck and Lobster Wonton.<br>
+        <br>
+        King's Kitchen has at your disposal three private dining rooms with seating capacity from 12 to 16 persons
+        offering the perfect setting for business entertainment or special family celebrations.
+        King's Kitchen is fully licensed and open 7 days a week for lunch and dinner. <br>
+        <br>
+        We look forward to welcoming you.
+    </div>
+    <div class="sale-box">
+        <h1>MENU</h1>
+        <% items.Menu.forEach(function(item){ %>
+            <div class="sale-item" data-item-id="<%= item.id %>">
+                <strong class="food-name"><%= item.name%></strong><br>
+                <div class="overlay">
+                    <img src="Image/<%= item.imgName %>" alt="" class="sale-img"><br>
+                    <span class="description"> <%= item.description %></span>
+                </div>
+                <span class="cost"> $ <%= item.price /100 %> </span>
+                <button type="button" class="addToCart">Add To Cart</button>
+            </div>
+            <% }) %>
+    </div>
+
+    <div class="view-cart" id="view-cart">
+        <h1 style="font-weight: bold; font-size: 3rem">Your Cart</h1>
+        <button class="close" onclick="showCart()">&#10006</button>
+        <span class="food-name">Food</span>
+        <span class="cost" >Price</span>
+        <span class="quantity">Quantity</span>
+        <div>
+            <button class="check-out">Order</button>
+            <span class="total"></span>
+        </div>
+    </div>
+</body>
+
+</html>

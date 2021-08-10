@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b40c5dd450.js" crossorigin="anonymous"></script>
+    <script defer src="cart.js" async></script>
+    <title>King's Kitchen</title>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <img src="Image/logo.png" alt="" class="logo">
+        <ul>
+            <button class="nav-btn">
+                <li><i class="fas fa-home"></i></li>
+            </button>
+            <button class="nav-btn">
+                <li><i class="fas fa-info"></i></li>
+            </button></li>
+            <button class="nav-btn" onclick="showCart()">
+                <li><i class="fas fa-shopping-cart"></i></li>
+            </button></li>
+        </ul>
+    </div>
+
+    <div class="view-cart" id="view-cart">
+        <h1>Your Cart</h1>
+        <button class="close" onclick="showCart()">&#10006</button>
+        <div>
+            <span class="total"></span>
+        </div>
+    </div>
+
+    <div class="sale-box">
+        <h1>MENU</h1>
+        <% Menu.forEach(function(item){ %>
+        <div class="sale-item">
+                <strong class="food-name"><%= item.name%></strong><br>
+                <img src="Image/pduck.jpg" alt="" class="sale-img"><br>
+                <span class="cost">$29.95</span>
+                <button type="button" class="addToCart">Add To Cart</button>
+        </div>
+        <% }) %>
+
+            <div class="sale-item">
+                <strong class="food-name">Lobster Wonton</strong><br>
+                <img src="Image/wonton.jpeg" alt="" class="sale-img"><br>
+                <span class="cost">$9.95</span>
+                <button type="button" class="addToCart">Add To Cart</button>
+            </div>
+            <div class="sale-item">
+                <strong class="food-name">Spicy Noodles With Beef</strong><br>
+                <img src="Image/noodles.jpeg" alt="" class="sale-img"><br>
+                <span class="cost">$12.95</span>
+                <button type="button" class="addToCart">Add To Cart</button>
+            </div>
+            <div class="sale-item">
+                <strong class="food-name">Stir-fry Assorted Vege</strong><br>
+                <img src="Image/vege.jpeg" alt="" class="sale-img"><br>
+                <span class="cost">$7.95</span>
+                <button type="button" class="addToCart">Add To Cart</button>
+            </div>
+            <div class="sale-item">
+                <strong class="food-name">Handmade Dumpling</strong><br>
+                <img src="Image/dumpling.jpeg" alt="" class="sale-img"><br>
+                <span class="cost">$7.95</span>
+                <button type="button" class="addToCart">Add To Cart</button>
+            </div>
+            <div class="sale-item">
+                <strong class="food-name">Spicy Pork Belly</strong><br>
+                <img src="Image/pork.jpeg" alt="" class="sale-img"><br>
+                <span class="cost">$9.95</span>
+                <button type="button" class="addToCart">Add To Cart</button>
+            </div>
+            <div class="sale-item">
+                <strong class="food-name">Seafood Noodles</strong><br>
+                <img src="Image/seafood.jpeg" alt="" class="sale-img"><br>
+                <span class="cost">$10.95</span>
+                <button type="button" class="addToCart">Add To Cart</button>
+            </div>
+            <div class="sale-item">
+                <strong class="food-name">Rice Chicken</strong><br>
+                <img src="Image/rice.jpeg" alt="" class="sale-img"><br>
+                <span class="cost">$5.95</span>
+                <button type="button" class="addToCart">Add To Cart</button>
+            </div>
+    </div>
+</body>
+
+</html>

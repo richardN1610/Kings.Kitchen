@@ -1,0 +1,61 @@
+{
+    "Menu":[
+        {
+        "id": 1,
+        "name": "Peking Duck",
+        "price": 2995,
+        "imgName":"pduck.jpg",
+        "description": "Peking duck is a dish from Beijing that has been prepared since the Imperial era. The meat is characterized by its thin, crisp skin, with authentic versions of the dish serving mostly the skin and little meat."
+        },
+        {
+            "id": 2,
+            "name": "Lobster Wonton",
+            "price": 1995,
+            "imgName":"wonton.jpeg",
+            "description": "Lobster Wonton is a dish from Qing Dynasty. This was King of Han favourite dish."
+        },
+        {
+            "id": 3,
+            "name": "Spicy Noodles",
+            "price": 1295,
+            "imgName":"noodles.jpeg",
+            "description": "A bowl of noodles in a well-spiced broth topped with tender beef cubes, spicy beef noodle soup is pungent, fragrant and very comforting indeed."
+        },
+        {
+            "id": 4,
+            "name": "Flying Vege",
+            "price": 1295,
+            "imgName":"vege.jpeg",
+            "description": "Organic vegetables stir fry with homemade sauce. Serve with hot rice. The best choice for vegetarians."
+        },
+        {
+            "id": 5,
+            "name": "Dumpling",
+            "price": 995,
+            "imgName":"dumpling.jpeg",
+            "description": "Homemade dumpling with pork and chives. Be careful because it is hot."
+        },
+        {
+            "id": 6,
+            "name": "Spicy Belly",
+            "price": 1595,
+            "imgName":"pork.jpeg",
+            "description": "Slow-cooked, thin sliced pork belly with a touch of spiciness and Sichuan pepper."
+        },
+        {
+            "id": 7,
+            "name": "Prawn Noodles",
+            "price": 1195,
+            "imgName":"seafood.jpeg",
+            "description": "Spicy seafood noodles served in tomato/spicy broth."
+        },
+        {
+            "id": 8,
+            "name": "Rice Chicken",
+            "price": 1195,
+            "imgName": "rice.jpeg",
+            "description": "Steam rice in chicken broth, braised chicken in XO sauce."
+        }
+    ]
+
+}

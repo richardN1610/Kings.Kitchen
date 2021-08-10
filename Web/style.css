@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cookie', cursive
+}
+
+html{
+    background-image: url("./Image/test.jpg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.nav-bar{
+    height: 130px;
+    border-bottom: 8px solid white;
+}
+.nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+}
+.nav-bar ul li{
+    display: block;
+    font-size: 2.7rem;
+    text-shadow: -1px 2px goldenrod;
+}
+.nav-btn{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-btn:hover{
+    transform: scale(1.2);
+}
+
+.about-paragraph{
+    position: absolute;
+    width: 40vw;
+    height: 50vh;
+    background-color: #ca982a;
+    font-size: 1.5rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    color: rgb(114, 101, 101);
+    display: none;
+    overflow: auto;
+}
+
+.sale-box{
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 2%;
+    width: 65vw;
+    height: 70vh;
+    overflow: auto;
+    background-color: rgba(255, 210, 9, 0.822);
+    box-shadow: -5px 4px #ffffff;
+    margin-top: 2%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.sale-box strong{
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.sale-item{
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    padding-top: 20px;
+    margin: 10px;
+    margin-left: 7%;
+}
+
+.sale-item button{
+    padding: 10px;
+    margin-left: 25%;
+    border-radius: 25px;
+    text-decoration: none;
+    outline: none;
+    background-color: rgba(127, 255, 212, 0.548);
+    margin-top: 20px;
+}
+.sale-item button:hover{
+    background-color: rgba(255, 174, 174, 0.349);
+    transform: scale(1.1);
+}
+.sale-img{
+    position: absolute;
+    display: block;
+    width: 22vw;
+    height: 22vh;
+    margin-left: 70px;
+    border: 2px solid rgb(39, 39, 39);
+}
+.remove, .quantity, .food-name{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.remove{
+    margin-right:-5%;
+}
+.view-cart{
+    position: absolute;
+    width: 25vw;
+    height: 60vh;
+    border: 5px solid rgb(255, 218, 224);
+    background-color: whitesmoke;
+    z-index: 1;
+    display: none;
+    right: 2%;
+    top: 10%;
+    font-size: 2rem;
+}
+.close{
+    width: 45px;
+    height: 35px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 25%;
+    font-size: 24px;
+    position: absolute;
+    top: 0%;
+    right: 0;
+}
+.total ,.check-out{
+    position: absolute;
+    bottom:5%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.check-out{
+    right: 5%;
+    width: 120px;
+    height: 40px;
+    outline: none;
+    text-decoration: none;
+    border-radius: 2em;
+}
+.check-out:hover{
+    border-color: rgb(245, 243, 124);
+    background-color: rgba(231, 233, 112, 0.253);
+}
+
+.total{
+    left: 5%;
+}
+.remove{
+    position: absolute;
+    right: 5%;
+}
+
+.quantity{
+    position: absolute;
+    text-align: right;
+    width: 40px;
+    height: 1.5em;
+    right: 15%;
+}
+
+.cost{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.view-cart .cost{
+    position: absolute;
+    right: 25%;
+}
+
+.description{
+    width: 22vw;
+    height: 22vh;
+    display: block;
+    opacity: 1;
+    background-color: #fbffbeda;
+    margin-left: 70px;
+    margin-top: -25px;
+    font-size: 1.4rem;
+    overflow: hidden;
+}
+
+.overlay:hover .sale-img{
+    transition: 2s ease;
+    opacity: 0;
+}
+
+.addToCart{
+    font-size: 1.2rem;
+}
+
+.close-para-btn{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10%;
+}
+@media only screen and (max-width:1024px){
+    .sale-box{
+        width: 75vw;
+        height: 70vh;
+        display: inline-block;
+    }
+    .sale-img, .description{
+        margin-left: 5vw;
+    }
+    .sale-item button{
+        width: 22vw;
+        font-size: 1em;
+        margin-left: 2vw;
+    }
+    .description{
+        font-size: 1rem;
+        overflow: auto;
+    }
+    .view-cart{
+        width: 45vw;
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .sale-box{
+        width: 75vw;
+        height: 70vh;
+        display: inline-block;
+    }
+    .sale-img, .description{
+        margin-left: 5vw;
+    }
+    .sale-item button{
+        width: 22vw;
+        font-size: 1em;
+        margin-left: 2vw;
+    }
+    .description{
+        font-size: 1rem;
+        overflow: auto;
+    }
+    .view-cart{
+        width: 60vw;
+        height: 55vh;   
+        font-size: 0.7rem;
+    }    
+}
+
+/*responsive for mobile*/
+@media only screen and (max-width:600px){
+    .sale-box{
+        width: 65vw;
+        height: 80vh;
+        display: grid;
+    }
+    .sale-item{
+        display: grid;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .description{
+        font-size: 1rem;
+        overflow: auto;
+        width: 40vw;   
+        height: 18vh;
+        margin-left: -2px;
+    }
+    .sale-img{
+        width: 40vw;   
+        height: 18vh;
+        margin-left: -2px;
+    }
+    .sale-item button{
+        width: 35vw;
+        font-size: 1rem;
+        margin-top: -15px;
+    }
+    .view-cart{
+        width: 85vw;
+        height: 65vh;
+    }
+    .quantity, .food-name, .cost{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .remove{
+        font-size: 0.7rem;
+    }
+    .cost{
+        left: 50%;
+    }
+    .about-paragraph{
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .sale-box{
+        width: 80vw;
+        height: 75vh;
+        display: grid;
+    }
+    .sale-box strong{
+        font-size: 1.2rem;
+    }
+    .sale-item{
+        display: grid;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .description{
+        font-size: 1rem;
+        overflow: auto;
+    }
+    .sale-img, .description{
+        width: 40vw;   
+        height: 18vh;
+    }
+    .sale-item button{
+        width: 35vw;
+        font-size: 1rem;
+        padding: 0;
+    }
+    .nav-bar ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5vw;
+    }
+    .about-paragraph{
+        width: 70vw;
+    }
+    .view-cart{
+        width: 85vw;
+        height: 70vh;
+    }
+    .quantity, .food-name, .cost{
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+    .remove{
+        font-size: 0.5rem;
+    }
+    .cost{
+        left: 50%;
+    }
+}
+
